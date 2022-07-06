@@ -134,7 +134,7 @@ We can simplify the code as below:
 </br>
 
 
-# Ordernar listas com a interface Comparatore e método Sort
+# Ordernar listas com a interface Comparator e método Sort
 
 </br>
 
