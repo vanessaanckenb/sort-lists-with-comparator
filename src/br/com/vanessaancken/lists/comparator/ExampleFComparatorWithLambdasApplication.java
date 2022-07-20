@@ -5,7 +5,7 @@ import br.com.vanessaancken.lists.comparator.domain.Client;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ExampleCComparatorWithLambdasApplication {
+public class ExampleFComparatorWithLambdasApplication {
 
     public static void main(String[] args) {
 
