@@ -1,6 +1,6 @@
 </br>
 
-⚠️ English and Portuguese explanation
+⚠️ English and Portuguese explanation / Explicações em inglês e português
 
 </br>
 
