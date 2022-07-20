@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
-public class ComparatorWithAnonymousClassApplication {
+public class ExampleAComparatorWithSeparatedClassesApplication {
 
     public static void main(String[] args) {
 
@@ -21,31 +21,32 @@ public class ComparatorWithAnonymousClassApplication {
         clients.add(client3);
         clients.add(client4);
 
-
         System.out.println("JAVA ORDER");
         System.out.println(clients);
         System.out.println();
 
-
-        final Comparator<Client> ageComparator = new Comparator<Client>() {
-            @Override
-            public int compare(Client client1, Client client2) {
-                return client1.getAge().compareTo(client2.getAge());
-            }
-        };
-        clients.sort(ageComparator);
+        clients.sort(new ClientsAgeComparator());
         System.out.println("AGE COMPARATOR");
         System.out.println(clients);
         System.out.println();
 
-
-        clients.sort(new Comparator<Client>() {
-            @Override
-            public int compare(Client client1, Client client2) {
-                return client1.getName().compareTo(client2.getName());
-            }
-        });
+        clients.sort(new ClientsNameComparator());
         System.out.println("NAME COMPARATOR");
         System.out.println(clients);
     }
 }
+
+class ClientsAgeComparator implements Comparator<Client> {
+    @Override
+    public int compare(Client client1, Client client2) {
+        return client1.getAge().compareTo(client2.getAge());
+    }
+}
+
+class ClientsNameComparator implements Comparator<Client> {
+    @Override
+    public int compare(Client client1, Client client2) {
+        return client1.getName().compareTo(client2.getName());
+    }
+}
+
