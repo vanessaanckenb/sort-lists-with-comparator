@@ -3,9 +3,10 @@ package br.com.vanessaancken.lists.comparator;
 import br.com.vanessaancken.lists.comparator.domain.Client;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
-public class ExampleFComparatorWithLambdasApplication {
+public class ExampleEComparatorWithSeparatedClassesApplication {
 
     public static void main(String[] args) {
 
@@ -21,18 +22,31 @@ public class ExampleFComparatorWithLambdasApplication {
         clients.add(client4);
 
         System.out.println("JAVA ORDER");
-        clients.forEach(client -> System.out.println(client));
+        System.out.println(clients);
         System.out.println();
 
-        clients.sort((Client c1, Client c2) -> {
-            return c1.getAge().compareTo(c2.getAge());
-        });
+        clients.sort(new ClientsAgeComparator());
         System.out.println("AGE COMPARATOR");
-        clients.forEach(client -> System.out.println(client));
+        System.out.println(clients);
         System.out.println();
 
-        clients.sort((c1, c2) -> c1.getName().compareTo(c2.getName()));
+        clients.sort(new ClientsNameComparator());
         System.out.println("NAME COMPARATOR");
-        clients.forEach(client -> System.out.println(client));
+        System.out.println(clients);
     }
 }
+
+class ClientsAgeComparator implements Comparator<Client> {
+    @Override
+    public int compare(Client client1, Client client2) {
+        return client1.getAge().compareTo(client2.getAge());
+    }
+}
+
+class ClientsNameComparator implements Comparator<Client> {
+    @Override
+    public int compare(Client client1, Client client2) {
+        return client1.getName().compareTo(client2.getName());
+    }
+}
+

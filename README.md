@@ -63,7 +63,7 @@ With Comparator (we are going to talk about it bellow) you're able to create man
 </br>
 </br>
 
-* Comparing with Comparator.comparing(Object::method) - Example C - BETTER WAY TO USE Comparator
+* Comparing with Comparator.comparing(Object::method) inside Collections.sort - Example C 
 
 Its simple, you just need to use the code bellow
 
@@ -78,6 +78,16 @@ after that you write Comparator.comparing with the object you are using (Client)
 </br>
 </br>
 
+* Comparing with Comparator.comparing(Object::method) inside list.sort - Example D - BETTER WAY TO USE COMPARATOR
+
+From java 8, its esier than example above, you just need to put Comparator.comparing(Object::method) inside your list.sort 
+
+```
+clients.sort(Comparator.comparing(Client::getAge));
+```
+
+</br>
+</br>
 
 * Sorting lists with classes - Example D
 
@@ -244,7 +254,7 @@ Já o Comparator (veremos a seguir), permite que você crie quantas regras espec
 </br>
 </br>
 
-* Comparando com Comparator.comparing(Objeto::metodo) - Example C - MELHOR JEITO DE USAR O Comparator
+* Comparando com Comparator.comparing(Objeto::metodo) dentro do Collections.sort - Example C
 
 É simples:
 
@@ -255,6 +265,17 @@ Collections.sort(clients, Comparator.comparing(Client::getAge));
 O primeiro parâmetro é a lista de objetos a ser comparada
 
 Depois disso, usar o Comparator.comparing com o nome da classe que esta usando (Client) e o atributo que deseja comparar (getAge)
+
+</br>
+</br>
+
+* Ordenando com o Comparator.comparing(Object::method) dentro do sort da propria lista - Example D - MELHOR JEITO DE USAR O COMPARATOR
+
+From java 8, its esier than example above, you just need to put Comparator.comparing(Object::method) inside your list.sort
+
+```
+clients.sort(Comparator.comparing(Client::getAge));
+```
 
 </br>
 </br>

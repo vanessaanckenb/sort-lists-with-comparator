@@ -8,7 +8,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-public class ExampleCSortWithComparableInClass {
+public class ExampleDComparatorInsideSortMethod {
 
     public static void main(String[] args) {
 
@@ -32,13 +32,13 @@ public class ExampleCSortWithComparableInClass {
         System.out.println("COMPARING WITH OFFICIAL RULE - COMPARABLE INTEFACE IMPLEMENTED IN CLIENTS WITH METHOD COMPARETO");
         clients.forEach(System.out::println);
 
-        Collections.sort(clients, Comparator.comparing(Client::getAge));
+        clients.sort(Comparator.comparing(Client::getAge));
 
         System.out.println("==============");
         System.out.println("COMPARING WITH COMPARATOR BY AGE");
         clients.forEach(System.out::println);
 
-        Collections.sort(clients, Comparator.comparing(Client::getValue));
+        clients.sort(Comparator.comparing(Client::getValue));
 
         System.out.println("==============");
         System.out.println("COMPARING WITH COMPARATOR BY VALUE");
