@@ -17,7 +17,8 @@ From Java 8 we can use sort() method which requires Comparator implementation (c
 
 
 </br>
-* Comparing Strings with Colletions.sort - Example A
+
+* Example A: Comparing Strings with Colletions.sort
 
 
 Comparing Strings and primitive types is simple, you just need to use Colletcions.sort(list).
@@ -25,7 +26,7 @@ Comparing Strings and primitive types is simple, you just need to use Colletcion
 </br>
 </br>
 
-* Comparing Object with Comparable - Exemplo B
+* Example B: Comparing Object with Comparable
 
 If we use Collections.sort for a list of Objects, which field would be compareted?
 
@@ -63,7 +64,7 @@ With Comparator (we are going to talk about it bellow) you're able to create man
 </br>
 </br>
 
-* Comparing with Comparator.comparing(Object::method) inside Collections.sort - Example C 
+* Example C: Comparing with Comparator.comparing(Object::method) inside Collections.sort
 
 Its simple, you just need to use the code bellow
 
@@ -78,7 +79,7 @@ after that you write Comparator.comparing with the object you are using (Client)
 </br>
 </br>
 
-* Comparing with Comparator.comparing(Object::method) inside list.sort - Example D - BETTER WAY TO USE COMPARATOR
+* Example D: Comparing with Comparator.comparing(Object::method) inside list.sort [[BETTER WAY TO USE COMPARATOR]]
 
 From java 8, its esier than example above, you just need to put Comparator.comparing(Object::method) inside your list.sort 
 
@@ -89,7 +90,7 @@ clients.sort(Comparator.comparing(Client::getAge));
 </br>
 </br>
 
-* Sorting lists with classes - Example D
+* Example E: Sorting lists with classes
 
 Create a class that implements Comparator<T> (T represents the type of class we are going to compare, in my case I will compare my class Client)
 
@@ -129,7 +130,7 @@ public static void main(String[] args) {
 </br>
 </br>
 
-* Sorting lists with anonymous classes - Example E
+* Example F: Sorting lists with anonymous classes 
 
 Above we created a class to be able to implement the Compartor and override the comparison method
 
@@ -174,7 +175,7 @@ To make the code cleaner we insert the object's constructor directly as a parame
 </br>
 </br>
 
-* Sorting Lists with Lambdas - Example F
+* Example G: Sorting Lists with Lambdas
 
 Instead of calling the constructor directly, sort method already expects a Comparator so we can just pass the parameters of the compare method with it rules inside it.
 </br>
@@ -214,14 +215,14 @@ A partir do Java 8 podemos usar o método sort() que exige um Comparator (compar
 
 </br>
 
-* Comparando Strings com Colletions.sort - Exemplo A
+* Exemplo A: Comparando Strings com Colletions.sort 
 
 Para comparar Strings ou até mesmo tipos primitivos mais simples, basta usar o Colletcions.sort(lista)
 
 </br>
 </br>
 
-* Comparando um Objeto com o Comparable - Exemplo B
+* Exemplo B: Comparando um Objeto com o Comparable 
 
 Se fossemos usar o Collections.sort de uma lista da classe, como ele saberia qual é o atributo de comparação?
 
@@ -254,7 +255,7 @@ Já o Comparator (veremos a seguir), permite que você crie quantas regras espec
 </br>
 </br>
 
-* Comparando com Comparator.comparing(Objeto::metodo) dentro do Collections.sort - Example C
+* Exemplo C: Comparando com Comparator.comparing(Objeto::metodo) dentro do Collections.sort 
 
 É simples:
 
@@ -269,7 +270,7 @@ Depois disso, usar o Comparator.comparing com o nome da classe que esta usando (
 </br>
 </br>
 
-* Ordenando com o Comparator.comparing(Object::method) dentro do sort da propria lista - Example D - MELHOR JEITO DE USAR O COMPARATOR
+* Exemplo D: Ordenando com o Comparator.comparing(Object::method) dentro do sort da propria lista [[MELHOR JEITO DE USAR O COMPARATOR]]
 
 From java 8, its esier than example above, you just need to put Comparator.comparing(Object::method) inside your list.sort
 
@@ -280,7 +281,7 @@ clients.sort(Comparator.comparing(Client::getAge));
 </br>
 </br>
 
-* Ordenando listas com classes - Exemplo D
+* Exemplo E: Ordenando listas com classes
 
 Criar uma classe que implements Comparator<T>  (T representa o tipo de classe que vamos comparar, no meu caso vou fazer uma comparação na classe Client)
 
@@ -320,7 +321,7 @@ public static void main(String[] args) {
 </br>
 </br>
 
-* Ordenando listas com classes anônimas - Exemplo E
+* Exemplo F: Ordenando listas com classes anônimas
 
 Acima criamos uma classe para poder implementar o Compartor e sobreescrever o método de comparação
 
@@ -365,7 +366,7 @@ Para deixar o código mais limpo inseririmos o construtor do objeto diretamente 
 </br>
 </br>
 
-* Ordenando listas com  Lambdas - Exemplo F
+* Exemplo G: Ordenando listas com  Lambdas 
 
 Em vez de chamarmos o construtor diretamente, como o método já espera um Comparator, podemos apenas passar os parâmetros do método compare e dentro sua regra.
 </br>
